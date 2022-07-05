@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kanit:wght@100;200;300;400;500;600&family=Manrope:wght@200;300;400;500;600;700&family=Righteous&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Pomodoro</title>
+  </head>
+  <body>
+    <h1>Pomodoro</h1>
+    <div class="container">
+      <div class="btn-group">
+        <button class="btns btn-pomodoro active-btn">Pomodoro</button>
+        <button class="btns btn-shortBreak">Short break</button>
+        <button class="btns btn-longBreak">long break</button>
+      </div>
+      <div class="container__box">
+        <div class="box box-1 active">
+          <h2 class="pomodoro__time"></h2>
+          <button class="pomodoro__pause">Start</button>
+        </div>
+        <div class="box box-2">
+          <h2 class="shortBreak__time"></h2>
+          <button class="shortBreak__pause">Start</button>
+        </div>
+        <div class="box box-3">
+          <h2 class="longBreak__time"></h2>
+          <button class="longBreak__pause">Start</button>
+        </div>
+      </div>
+    </div>
+    <button class="setting__btn">Setting</button>
+    <p></p>
+    <div class="setting activeSetting">
+      <div class="setting__head">
+        <h3>Setting</h3>
+        <i class="fa-solid fa-xmark close__settingBtn"></i>
+      </div>
+      <div class="setting__body">
+        <h3 class="setting__body-head">Time (Minutes)</h3>
+        <form class="setting__form">
+          <div>
+            <label for="pomodora__time"> Pomodoro </label>
+            <input type="number" min="25" id="pomodora__time" value="25" />
+          </div>
+          <div>
+            <label for="pomodora__time"> Short Break </label>
+            <input type="number" min="5" id="pomodora__shortBreak" value="5" />
+          </div>
+          <div>
+            <label for="pomodora__time"> Long break </label>
+            <input type="number" min="10" id="pomodora__longBreak" value="10" />
+          </div>
+        </form>
+        <div class="setting__fonts">
+          <h3>Fonts</h3>
+          <div class="setting__fonts-box">
+            <div class="font__1 font__box activeFont">Aa</div>
+            <div class="font__2 font__box">Aa</div>
+            <div class="font__3 font__box">Aa</div>
+          </div>
+        </div>
+        <div class="setting__colors">
+          <h3>Colors</h3>
+          <div class="setting__colors-box">
+            <div class="color__1 color__box activeFont"></div>
+            <div class="color__2 color__box"></div>
+            <div class="color__3 color__box"></div>
+          </div>
+        </div>
+        <button class="apply__btn">Apply</button>
+      </div>
+    </div>
+    <audio
+      id="sound"
+      src="./sound/mixkit-street-public-alarm-997.wav"
+      style="opacity: 0"
+    >
+      <source />
+    </audio>
+    <script src="app.js"></script>
+  </body>
+</html>
