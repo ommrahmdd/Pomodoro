@@ -112,7 +112,7 @@ pomodoro__pause.addEventListener("click", () => {
         sound.play();
         clearInterval(timer);
       }
-    }, 15);
+    }, 1000);
   } else {
     console.log("Pause");
     pomodoro__pause.textContent = "Start";
@@ -149,7 +149,7 @@ shortBreak__pause.addEventListener("click", () => {
       sound.play();
       clearInterval(shortTimer);
     }
-  }, 15);
+  }, 1000);
 });
 let longTimer;
 longBreak__pause.addEventListener("click", () => {
@@ -182,7 +182,7 @@ longBreak__pause.addEventListener("click", () => {
 
       clearInterval(longTimer);
     }
-  }, 15);
+  }, 1000);
 });
 
 fontBox.addEventListener("click", function (e) {
